@@ -17,7 +17,7 @@ class AuctionList(ListAPIView):
 class AcutionCreate(CreateAPIView):
     permission_classes = [permissions.IsAdminUser]
     queryset = Auctions.objects.all()
-    serializer_class = AuctionCreateListSerializer
+    serializer_class = AuctionDetailSerializer
     
     def perform_create(self, serializer):
         serializer.save(current_price = serializer.validated_data['start_price'], is_closed=False)
@@ -35,9 +35,9 @@ class OfferCreate(CreateAPIView):
         
 
         if auction.is_closed:
-            raise ValidationError({'error': 'auction is not avaliable'}, status=400)
+            raise ValidationError({'error': 'auction is not avaliable'})
         if amount < auction.current_price:
-            raise ValidationError({'error': 'amount is too low'}, status=400)
+            raise ValidationError({'error': 'amount is too low'})
         serializer.save(user = self.request.user.userprofile, auction=auction)
         auction.current_price = amount
         auction.winner = self.request.user.userprofile

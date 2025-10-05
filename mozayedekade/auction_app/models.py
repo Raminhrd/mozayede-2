@@ -6,6 +6,9 @@ from django.utils import timezone
 class Company(models.Model):
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
 
 class Auctions(models.Model):
     title = models.CharField(max_length=100)
@@ -20,7 +23,6 @@ class Auctions(models.Model):
     end_time = models.DateTimeField()
     last_offer = models.DateTimeField(null=True , blank=True)
 
-
     def close(self):
         if self.is_closed:
             return False
@@ -29,6 +31,9 @@ class Auctions(models.Model):
             self.save()
             return True
         return self.is_closed
+    
+    def __str__(self):
+        return f'{self.title} by {self.company.name}'
 
 class Offer(models.Model):
     user = models.ForeignKey(to=UserProfile, on_delete=models.CASCADE)

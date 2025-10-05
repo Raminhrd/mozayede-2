@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login', TokenObtainPairView.as_view()),
     path('refresh', TokenRefreshView.as_view()),
+    path('auction/', include('auction_app.urls')),
 ]

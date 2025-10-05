@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "33c7ac63-551f-4c8d-80f4-9b42b53f7e96",
+		"name": "mozayedekade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48560792",
+		"_collection_link": "https://raminhr-work-4848007.postman.co/workspace/Ramin-Hr's-Workspace~00ed1e82-e4e5-41ac-86c5-b5e36c9eff16/collection/48560792-33c7ac63-551f-4c8d-80f4-9b42b53f7e96?action=share&source=collection_link&creator=48560792"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:8000/auction/list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5NzY1MzQwLCJpYXQiOjE3NTk2Nzg5NDAsImp0aSI6IjkxZDcxNWJhNjMwNDQxNjhhOTQzMmZkM2UwYmQ4MTI4IiwidXNlcl9pZCI6IjIifQ.CLHjrA8x-50SRQH0C-EQ0gxn8Nbxjv5TSAePX5r860Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/auction/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auction",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/auction/offer/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5NzY1MzQwLCJpYXQiOjE3NTk2Nzg5NDAsImp0aSI6IjkxZDcxNWJhNjMwNDQxNjhhOTQzMmZkM2UwYmQ4MTI4IiwidXNlcl9pZCI6IjIifQ.CLHjrA8x-50SRQH0C-EQ0gxn8Nbxjv5TSAePX5r860Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 70000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auction/offer/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auction",
+						"offer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/auction/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU5NzY2NTExLCJpYXQiOjE3NTk2ODAxMTEsImp0aSI6Ijk2MTRkMzVhM2NjMDRkMWI5NWNmNTEwYTllNGYxYTIzIiwidXNlcl9pZCI6IjEifQ.RAdJ-zPECaIFC0pYaAP7wHpFVatCvbxZis58o534AgY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auction/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auction",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
